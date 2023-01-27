@@ -1,0 +1,156 @@
+#main {
+  max-height: 300px;
+  text-align: center;
+}
+
+form {
+  text-align: center;
+}
+
+#flex-container {
+  display: none;
+}
+#registerform {
+  display: flex;
+  flex-direction: column;
+}
+div[id$="_err"] {
+  /* selects all div with id that ends with _err */
+  /* https://www.w3schools.com/css/css_attribute_selectors.asp for more info */
+  /* we could have used name_err, email_err, mobile_err, comments_err, but it can be quite long. */
+  color: red;
+  padding: 0.25rem;
+  font-family: 'Cantarell', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  display: none; /* initially hidden prior to validation */
+}
+
+input[type="submit"] {
+  background-color: #04aa6d;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  /* float: right; */
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+#error{
+  color:red;
+  font-family: 'Cantarell', sans-serif;
+  font-size:1.25em;
+  font-weight:bold;
+  text-align: center;
+  display: inline-block;
+}
+footer {
+  margin-top: 40%;
+}
+
+@media screen and (min-width: 768px) {
+  #main {
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-areas: "heroarea heroarea"; */
+  }
+
+  .form {
+    grid-area: heroarea;
+    margin-bottom: 20%;
+    justify-content: center;
+  }
+
+  #logo {
+    margin-right: 40%;
+    width: 250px;
+  }
+  #uid,
+  #email,
+  #psw,
+  #psw-repeat {
+    font-size: 1em;
+    margin-top: 2%;
+  }
+  #registerform {
+    margin-top: 30%;
+    margin-left: 10%;
+  }
+  input[type="submit"] {
+    width: 50%;
+    margin-top: 5%;
+    margin-right: 25%;
+    float:right;
+  }
+  #registerbtn {
+    font-size: 1em;
+  }
+
+  p {
+    font-size: 1.5em;
+  }
+  footer {
+    margin-top: 50%;
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  #main {
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-areas: "heroarea heroarea heroarea"; */
+    flex-direction: row;
+  }
+
+  .form {
+    grid-area: heroarea;
+    margin-bottom: 20%;
+    font-size: 2em;
+    justify-content: center;
+  }
+  #logo {
+    margin-right: 40%;
+    width: 300px;
+  }
+  #flex-container {
+    display: flex;
+    grid-gap: 10px;
+    flex-direction: column;
+    width: 60%;
+    margin-top: 25%;
+  }
+
+  #flex-container > div {
+    text-align: center;
+    width: 100%;
+  }
+  #registerform {
+    width: 60%;
+  }
+  #uid,
+  #email,
+  #psw,
+  #psw-repeat {
+    font-size: 1.2em;
+    margin-top: 2%;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+  p {
+    font-size: 1.5em;
+    text-align: justify;
+  }
+  #registerbtn {
+    font-size: 1em;
+  }
+
+  footer {
+    font-size: 2em;
+    margin-top: 50%;
+  }
+}

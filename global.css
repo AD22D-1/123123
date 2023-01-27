@@ -1,0 +1,159 @@
+body {
+    margin: 10px auto;
+    min-width: 320px;
+    max-width: 1440px;
+    background-image: url("../images/Background.jpg");
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-blend-mode: lighten;
+    width: 80%;
+    text-align: center;
+    color:#1B365C;
+    
+}
+header,
+#main,
+footer {        
+    margin: 10px auto;
+    text-align: center;
+}
+
+#main {
+    padding:10px;
+    min-height:500px;
+}
+
+#menu {
+    justify-content: flex-end;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;    
+
+}
+
+#logo {
+    width:20%;
+   text-align:center;
+    /* position: relative; */
+}
+
+#menu li a {
+    display:block;
+    text-decoration: none;
+    color:black; 
+    padding: 10px 10px;
+    margin: 0px 5px;
+    line-height: 1;
+    border-top:1px solid #a01548;  
+    font-weight: bold;
+    font-family: 'Kanit', sans-serif;
+    font-size:1.2em;
+   
+}
+
+#menu li a:hover, #menu li a:active  {
+    color:white;
+    background-color:#a01548;
+    transition: all 0.25s;
+}
+
+h1, h2, h3 {    
+    font-size: 2em;
+    text-align: center;
+    font-weight: bolder;
+}
+
+h1 {
+    margin:15px 0px;
+    font-size: 1.5em; 
+    font-family: 'Kanit', sans-serif;
+}
+
+h2 {
+    margin:15px 0px;
+    font-size:large;
+    font-family: 'Kanit', sans-serif;
+}
+
+h3 {
+    margin:15px 0px;
+    font-size:medium;
+}
+
+p {
+    line-height: 1.5;
+    padding:5px;
+    font-family: 'Cantarell', sans-serif;
+    font-size:1em;
+}
+img{
+    width:100%;
+}
+.button {
+    color:white;
+    padding:8px 15px;
+    margin: 15px;
+    background-color: #a01548;        
+    border:none;
+    border-radius: 15px;  
+    color:black;
+    font-family: 'Cantarell', sans-serif;
+}
+
+.disabled {
+    background-color: #e0dbdd;
+}
+
+.rightalign {
+    text-align: right;
+}
+
+.leftalign {
+    text-align: left;
+}
+footer{
+    font-family: 'Open Sans', sans-serif;
+    font-size:1em;
+}
+/* Start of Hamburger */
+nav label { 
+    display: inline-block;
+    width:100%;
+    color: black;           
+    font-size: 30px;   
+    text-align: left;    
+    padding:10px;
+}
+#hamburger {
+    display:none;
+}
+
+#menu { display: none; }
+nav input:checked ~ #menu { display: flex; }
+
+
+@media screen and (min-width: 768px) {
+    #menu {
+      display: flex;
+      flex-direction: row; 
+      justify-content: flex-end;
+    }
+    #logo{
+        float: left;
+        position:absolute;
+        left:0;
+        top:0;
+        width:10%;
+    }
+    #menu li a {
+      border-top: none;
+    }
+    nav label,
+    #hamburger {
+      display: none;
+    }
+    
+  }
+  

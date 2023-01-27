@@ -1,0 +1,66 @@
+#main{
+    text-align: center;
+}
+
+article {
+    justify-content: center;
+    margin-left:auto;
+    margin-right: auto;
+  }
+  
+  #grid-container{
+  display:flex;
+  flex-direction: column;
+  width:100%;
+  }
+  
+  iframe{
+    width:100%;
+  }
+  
+  .heart{
+    width:10%;
+    margin-left:70%;
+  }
+
+  .fa{
+float:left;
+  }
+  p{
+    text-align: center;
+  }
+  p#center{
+    text-align: justify;
+  }
+  @media screen and (min-width: 768px) {
+    #grid-container {
+      display:grid;
+      grid-gap: 10px;
+       grid-template-columns: 1fr 1fr;
+       grid-template-areas:
+         "heroarea heroarea"
+         "feature1 feature1"
+         "feature2 feature3"
+         ;
+     }
+     h1{
+      text-align: center;
+      display:block;
+    }
+    
+   }
+   
+   @media screen and (min-width: 1440px) {
+    #grid-container{
+      display:grid;
+      grid-gap: 10px;
+       grid-template-columns: 1fr 1fr 1fr;
+       grid-template-areas: 
+       "heroarea heroarea heroarea"
+       "feature1 feature1 feature1"
+        "feature2 feature3 feature4";
+     }
+   
+     
+   }
+   

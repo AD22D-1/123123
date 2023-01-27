@@ -1,0 +1,148 @@
+.heroimage {
+  display: none;
+}
+.block {
+  justify-content: center;
+  margin-bottom: 5%;
+}
+#flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+article p {
+  text-align: justify;
+}
+
+video {
+  width: 100%;
+}
+.button{
+  background-color: white;
+}
+.bar {
+  padding:2px;
+  background-color:lightblue;
+  font-weight: bolder;
+  text-align: center;
+}
+.content {
+            
+  background-color:lightcyan;
+  padding:2rem;
+}
+
+ p{
+  text-align: justify;
+}
+@media screen and (min-width: 768px) {
+  /* .video {
+    grid-area: feature1;
+    margin: 0px;
+  } */
+  .feat1 {
+    grid-area: feature2;
+  }
+  .feat2 {
+    grid-area: feature3;
+  }
+  .feat3 {
+    grid-area: feature4;
+  }
+  .feat4 {
+    grid-area: feature5;
+  }
+  .feat5 {
+    grid-area: feature6;
+  }
+  .feat6 {
+    grid-area: feature7;
+  }
+
+  #flex-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      /* "feature1 feature1" */
+      "feature2 feature3"
+      "feature4 feature5"
+      "feature6 feature7";
+    gap: 10px;
+  }
+  
+  
+
+  h1 {
+    margin-top: 15%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .heroimage {
+    height: 350px;
+    background-image: url("../images/Movie\ background.jpg");
+    max-width: 1400px;
+    min-height: 500px;
+    margin-top: 5%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* mqimg6: added a quick flex in the column direction to position the tagline and button group in the center */
+    display: flex;
+    flex-direction: column;
+    /* these 2 statements will centre both tagline and button to group in the centre */
+    align-items: center;
+    justify-content: center;
+    color: white; /* this will override the default text color as it is more specific  (class > tag) */
+  }
+  .heroimage {
+    grid-area: heroarea;
+    text-align: center;
+  }
+  .video {
+    grid-area: feature1;
+  }
+  .feat1 {
+    grid-area: feature2;
+  }
+  .feat2 {
+    grid-area: feature3;
+  }
+  .feat3 {
+    grid-area: feature4;
+  }
+  .feat4 {
+    grid-area: feature5;
+  }
+  .feat5 {
+    grid-area: feature6;
+  }
+  .feat6 {
+    grid-area: feature7;
+  }
+
+  #flex-container {
+  display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "heroarea heroarea heroarea"
+      "feature1 feature1 feature1"
+      "feature2 feature3 feature4 "
+      "feature5 feature6 feature7 ";
+  }
+
+  /* #flex-container {
+    grid-area: feature2;
+    width: 100%;
+  }
+  #flex-container {
+    grid-area: feature3;
+    width: 100%;
+  }
+  #flex-container {
+    grid-area: feature4;
+    width: 100%;
+  } */
+}
